@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+	<!-- Metadata -->
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>Dergun Town is offline.</title>
+
+	<!-- Styles -->
+	<link rel="stylesheet" href="styles.css" media="all" />
+
+	<!--meta properties -->
+	<meta name="description" content="Dergun Town Offline Page" />
+
+	<!--detailed robots meta https://developers.google.com/search/reference/robots_meta_tag -->
+	<meta name="robots" content="index, follow, max-snippet: -1, max-image-preview:large, max-video-preview: -1" />
+
+	<!--open graph meta tags for social sites and search engines-->
+	<meta property="og:locale" content="en_GB" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Dergun Town is currently offline." />
+	<meta property="og:description" content="This is the offline page for Dergun Town. Check here for when we'll be back!" />
+	<meta property="og:url" content="https://offline.uppercenter.dev/" />
+	<meta name="identifier-URL" content="http://www.websiteaddress.com">
+	<meta property="og:site_name" content="Dergun Town Offline Page" />
+	<meta property="og:image" content="images//hom-banner-compressed.jpg" />
+	<meta property="og:image:secure_url" content="images//hom-banner-compressed.jpg" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="660" />
+
+	<!-- Site fevicon icons -->
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+</head>
+
+<body>
+	<!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="https://chrome.google.com/">upgrade your browser</a> to improve
+        your experience.
+      </p>
+    <![endif]-->
+	<div id="wrapper">
+		<div class="grid">
+			<span class="server"></span>
+			<span class="server"></span>
+			<span class="server"></span>
+			<span class="server"></span>
+			<span class="server"></span>
+		</div>
+
+		<div class="content">
+			<h1>Currently performing maintenance.</h1>
+			<p>We will be back in about:</p>
+			<div id="countdown"></div>
+		</div>
+	</div>
+	<div id="countdown"></div>
+	<script>
+		function countdownTimer() {
+			const difference = +new Date("2022-04-06") - +new Date();
+			let remaining = "Loading...";
+
+			if (difference > 0) {
+				const parts = {
+					days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+					hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+					minutes: Math.floor((difference / 1000 / 60) % 60),
+					seconds: Math.floor((difference / 1000) % 60),
+				};
+
+				remaining = Object.keys(parts)
+					.map((part) => {
+						if (!parts[part]) return;
+						return `${parts[part]} ${part}`;
+					})
+					.join(" ");
+			}
+
+			document.getElementById("countdown").innerHTML = remaining;
+		}
+
+		countdownTimer();
+		setInterval(countdownTimer, 1000);
+	</script>
+</body>
+
+</html>
