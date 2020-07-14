@@ -26,7 +26,8 @@
 	<meta property="og:locale" content="en_GB" />
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="Dergun Town is currently offline." />
-	<meta property="og:description" content="This is the offline page for Dergun Town. Check here for when we'll be back!" />
+	<meta property="og:description"
+		content="This is the offline page for Dergun Town. Check here for when we'll be back!" />
 	<meta property="og:url" content="https://offline.uppercenter.dev/" />
 	<meta name="identifier-URL" content="https://offline.uppercenter.dev/">
 	<meta property="og:site_name" content="Dergun Town Offline Page" />
@@ -50,10 +51,10 @@
         your experience.
       </p>
 	<![endif]-->
-	<div class=logo> 
+	<div id=logo>
 		<img src="/logos/logo-large.png" alt="Dergun Town Logo" sizes="100%">
 	</div>
-	<div id="wrapper">
+	<div id="main">
 		<div class="grid">
 			<span class="server"></span>
 			<span class="server"></span>
@@ -61,14 +62,17 @@
 			<span class="server"></span>
 			<span class="server"></span>
 		</div>
-
-		<div class="content">
-			<h1>Currently performing maintenance.</h1>
-			<p>We will be back in about:</p>
-			<div id="countdown"></div>
-		</div>
+		<h1>We are currently performing critical server maintenance.</h1>
 	</div>
-	<div id="countdown"></div>
+
+	<div id=eta>
+		<div style="display:inline-flex">
+			<div style="padding-right: 5px;">This will take around</div>
+			<div id=countdown></div>
+		</div>
+
+	</div>
+
 	<script>
 		function countdownTimer() {
 			const difference = +new Date("2022-04-06") - +new Date();
