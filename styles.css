@@ -11,37 +11,6 @@ body {
 	background-color: rgb(15, 14, 23);
 }
 
-.img {
-	background-image: url(/logos/logo-large.png);
-}
-
-/*
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-	.img {
-		background-image: url(/logos/logo-large.png);
-	}
-}
-
-@media (min-width: 800px) {
-	.img {
-		background-image: url(/logos/logo-large.png);
-	}
-}
-
-@media (-webkit-min-device-pixel-ratio: 2) and (min-width: 800px), (min-resolution: 192dpi) and (min-width: 800px) {
-	.img {
-		background-image: url(/logos/logo-large.png);
-	}
-}
-*/
-
-#logo {
-	width: 100%;
-	height: 100%;
-	text-align: center;
-	margin-top: 50px;
-}
-
 #main {
 	width: 470px;
 	height: 350px;
