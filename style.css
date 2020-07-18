@@ -35,14 +35,18 @@ html, body {
 	text-align: center;
 }
 
-/* hide mobile version by default */
+/*
+Hide the mobile logo by default
+*/
 
 .logo .mobile {
 	display: none;
 }
 
-/* when screen is less than 600px wide
-     show mobile version and hide desktop */
+/* 
+When the screen is less than 330px wide (Galaxy Fold)
+	Show the mobile version and hide the desktop one.
+*/
 
 @media (max-width: 330px) {
 	.logo .mobile {
