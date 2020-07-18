@@ -36,9 +36,19 @@ p, h3 {
 	text-align: center;
 	color: aliceblue;
 	font-size: 20px;
-	line-height: 2.5rem;
+	line-height: 2.7rem;
 	padding-left: 1rem;
 	padding-right: 1rem;
+}
+
+#countdown{
+	text-align: center;
+	color: aliceblue;
+	font-size: 20px;
+	line-height: 2.7rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	font-weight: bolder;
 }
 
 a {

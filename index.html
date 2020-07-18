@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <head>
 	<!-- Metadata -->
 	<meta charset='UTF-8' />
@@ -11,7 +12,7 @@
 	<link rel='stylesheet' href='styles.css' media='all' />
 
 	<!-- Auto Refresh -->
-	<meta http-equiv='refresh' content='60' >
+	<meta http-equiv='refresh' content='60'>
 
 	<!--meta properties -->
 	<meta name='description' content='Dergun Town Offline Page' />
@@ -23,8 +24,8 @@
 	<meta property='og:locale' content='en_GB' />
 	<meta property='og:type' content='website' />
 	<meta property='og:title' content='Dergun Town is currently offline.' />
-	<meta property='og:description'
-		content='This is the offline page for Dergun Town. Check here for when we'll be back!' />
+	<meta property='og:description' content='This is the offline page for Dergun Town. Check here for when we' ll be
+		back!' />
 	<meta property='og:url' content='https://offline.uppercenter.dev/' />
 	<meta name='identifier-URL' content='https://offline.uppercenter.dev/'>
 	<meta property='og:site_name' content='Dergun Town Offline Page' />
@@ -40,7 +41,7 @@
 <body>
 	<div class='Center'>
 		<div class=logo>
-			<img src='logo.png' alt='Dergun Town Logo'> 
+			<img src='logo.png' alt='Dergun Town Logo'>
 		</div>
 		<div>
 			<h3>
@@ -49,20 +50,18 @@
 		</div>
 		<div>
 			<p>
-				We'll be back soon, but for more updates and information, join our <a href='https://discord.com/invite/yV79jve' target='_blank'>Discord Server.</a>
+				We'll be back soon, but for more up to date information and questions, join our <a
+					href='https://discord.com/invite/yV79jve' target='_blank'>Discord Server.</a>
 			</p>
 		</div>
 		<div>
 			<p>
-				The maintenance will conclude in approximately:
+				This page will automatically refresh every 60 seconds. Maintenance will conclude in approximately:
 			</p>
 		</div>
-		<div>
-			<p>
-				This page will automatically refresh every 60 seconds.
-			</p>
+			<div id="countdown"></div>
 		</div>
-	</div> 
+	</div>
 	<div id='particle-canvas'></div>
 
 	<script src='https://rawgit.com/JulianLaval/canvas-particle-network/master/particle-network.min.js'></script>
@@ -76,6 +75,31 @@
 			density: 'medium'
 		};
 		var particleCanvas = new ParticleNetwork(canvasDiv, options);
+		function countdownTimer() {
+			const difference = +new Date("2022-04-06") - +new Date();
+			let remaining = "Loading...";
+
+			if (difference > 0) {
+				const parts = {
+					days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+					hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+					minutes: Math.floor((difference / 1000 / 60) % 60),
+					seconds: Math.floor((difference / 1000) % 60),
+				};
+
+				remaining = Object.keys(parts)
+					.map((part) => {
+						if (!parts[part]) return;
+						return `${parts[part]} ${part}`;
+					})
+					.join(" ");
+			}
+
+			document.getElementById("countdown").innerHTML = remaining;
+		}
+
+		countdownTimer();
+		setInterval(countdownTimer, 1000);
 	</script>
 </body>
 
