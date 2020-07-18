@@ -59,7 +59,7 @@
 				This page will automatically refresh every 60 seconds. Maintenance will conclude in approximately:
 			</p>
 		</div>
-			<div id="countdown"></div>
+			<div id='countdown'></div>
 		</div>
 	</div>
 	<div id='particle-canvas'></div>
@@ -76,8 +76,8 @@
 		};
 		var particleCanvas = new ParticleNetwork(canvasDiv, options);
 		function countdownTimer() {
-			const difference = +new Date("2022-04-06") - +new Date();
-			let remaining = "Loading...";
+			const difference = +new Date('2022-04-06') - +new Date();
+			let remaining = 'Loading...';
 
 			if (difference > 0) {
 				const parts = {
@@ -92,10 +92,10 @@
 						if (!parts[part]) return;
 						return `${parts[part]} ${part}`;
 					})
-					.join(" ");
+					.join(' ');
 			}
 
-			document.getElementById("countdown").innerHTML = remaining;
+			document.getElementById('countdown').innerHTML = remaining;
 		}
 
 		countdownTimer();
