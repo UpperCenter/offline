@@ -1,3 +1,8 @@
+@viewport {
+	width: device-width;
+	zoom: 1.0;
+}
+
 html, body {
 	font-family: Ubuntu, -apple-system, BlinkMacSystemFont, 'Segoe UI', Tahoma, Geneva, Verdana, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	font-size: 12px;
@@ -15,21 +20,38 @@ html, body {
 
 .Center {
 	z-index: 50;
-	width: 50rem;
-	height: 35rem;
 	position: absolute;
 	transform: translate(-50%, -50%);
 	top: 50%;
 	left: 50%;
 	background-color: rgb(153, 80, 80);
 	border-radius: 0.5rem;
+	max-width: 50rem;
+	width: 100vw;
 }
 
 .logo {
 	margin-top: 1rem;
 	text-align: center;
-	width: auto;
-	height: auto;
+}
+
+/* hide mobile version by default */
+
+.logo .mobile {
+	display: none;
+}
+
+/* when screen is less than 600px wide
+     show mobile version and hide desktop */
+
+@media (max-width: 330px) {
+	.logo .mobile {
+		display: block;
+		margin-left: 8.5rem;
+	}
+	.logo .desktop {
+		display: none;
+	}
 }
 
 p, h3 {
@@ -41,7 +63,7 @@ p, h3 {
 	padding-right: 1rem;
 }
 
-#countdown{
+#countdown {
 	text-align: center;
 	color: aliceblue;
 	font-size: 20px;
