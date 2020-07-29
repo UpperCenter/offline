@@ -2,83 +2,101 @@
 
 <head>
 	<!-- Metadata -->
-	<meta charset='UTF-8' />
-	<meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' />
-	<meta http-equiv='X-UA-Compatible' content='IE=edge' />
+	<meta charset="UTF-8" />
+	<meta
+		name="viewport"
+		content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+	/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<title>Dergun Town is offline.</title>
 
 	<!-- Styles -->
-	<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Ubuntu'>
-	<link rel='stylesheet' href='styles.css' />
+	<link
+		rel="stylesheet"
+		href="https://fonts.googleapis.com/css?family=Ubuntu"
+	/>
+	<link rel="stylesheet" href="styles.css" />
 
 	<!-- Auto Refresh -->
-	<meta http-equiv = 'refresh' content = '60; url = https://derguns.town/' />
+	<meta http-equiv="refresh" content="600; url = https://derguns.town/" />
 
 	<!--meta properties -->
-	<meta name='description' content='Dergun Town Offline Page' />
+	<meta name="description" content="Dergun Town Offline Page" />
 
 	<!--detailed robots meta https://developers.google.com/search/reference/robots_meta_tag -->
-	<meta name='robots' content='index, follow, max-snippet: -1, max-image-preview:large, max-video-preview: -1' />
+	<meta
+		name="robots"
+		content="index, follow, max-snippet: -1, max-image-preview:large, max-video-preview: -1"
+	/>
 
 	<!--open graph meta tags for social sites and search engines-->
-	<meta property='og:locale' content='en_GB' />
-	<meta property='og:type' content='website' />
-	<meta property='og:title' content='Dergun Town is currently offline.' />
-	<meta property='og:description' content='This is the offline page for Dergun Town. Check here for when we' ll be
-		back!' />
-	<meta property='og:url' content='https://offline.uppercenter.dev/' />
-	<meta name='identifier-URL' content='https://offline.uppercenter.dev/'>
-	<meta property='og:site_name' content='Dergun Town Offline Page' />
-	<meta property='og:image' content='logo.png' />
-	<meta property='og:image:secure_url' content='logo.png' />
-	<meta property='og:image:width' content='76' />
-	<meta property='og:image:height' content='86' />
-
+	<meta property="og:locale" content="en_GB" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Dergun Town is currently offline." />
+	<meta
+		property="og:description"
+		content="This is the offline page for Dergun Town. Check here for when we will be back!"
+	/>
+	<meta property="og:url" content="https://offline.uppercenter.dev/" />
+	<meta name="identifier-URL" content="https://offline.uppercenter.dev/" />
+	<meta property="og:site_name" content="Dergun Town Offline Page" />
+	<meta property="og:image" content="logo.png" />
+	<meta property="og:image:secure_url" content="logo.png" />
+	<meta property="og:image:width" content="76" />
+	<meta property="og:image:height" content="86" />
 </head>
 
-<link rel='stylesheet' href='style.css'>
+<link rel="stylesheet" href="style.css" />
 
 <body>
-	<div class='Center'>
-		<div class='logo'>
-			<img src='logo.png' class='desktop' />
-			<img src='logo-small.png' class='mobile' />
+	<div class="Center">
+		<div class="logo">
+			<img src="logo.png" class="desktop" />
+			<img src="logo-small.png" class="mobile" />
 		</div>
 		<div>
 			<h3>
-				Dergun Town is currently offline for maintenance.
+				Dergun Town is currently in maintenance mode.
 			</h3>
 		</div>
 		<div>
 			<p>
-				We'll be back soon, but for more up to date information and questions, join our <a
-					href='https://discord.com/invite/yV79jve' target='_blank'>Discord Server.</a>
+				We'll be back soon, but for more up to date information and
+				questions, join our
+				<a href="https://discord.com/invite/yV79jve" target="_blank"
+					>Discord Server.</a
+				>
+			</p>
+			<p>
+				If you're stuck loading Dergun Town, or one of your friends are,
+				please try using <code>CTRL + SHIFT + R</code>
+				to refresh.
 			</p>
 		</div>
 		<div>
 			<p>
-				This page will automatically refresh every 60 seconds. Maintenance will conclude in approximately:
+				This page will automatically refresh every 60 seconds.
+				Maintenance will conclude in approximately:
 			</p>
 		</div>
-		<div id='countdown'></div>
+		<div id="countdown"></div>
 	</div>
-	</div>
-	<div id='particle-canvas'></div>
+	<div id="particle-canvas"></div>
 
-	<script src='https://rawgit.com/JulianLaval/canvas-particle-network/master/particle-network.min.js'></script>
+	<script src="https://rawgit.com/JulianLaval/canvas-particle-network/master/particle-network.min.js"></script>
 	<script>
-		var canvasDiv = document.getElementById('particle-canvas');
+		var canvasDiv = document.getElementById('particle-canvas')
 		var options = {
 			particleColor: '#e37575',
 
 			interactive: true,
 			speed: 'medium',
-			density: 'medium'
-		};
-		var particleCanvas = new ParticleNetwork(canvasDiv, options);
+			density: 'medium',
+		}
+		var particleCanvas = new ParticleNetwork(canvasDiv, options)
 		function countdownTimer() {
-			const difference = +new Date('2022-04-06') - +new Date();
-			let remaining = 'Loading...';
+			const difference = +new Date('2022-04-06') - +new Date()
+			let remaining = 'Loading...'
 
 			if (difference > 0) {
 				const parts = {
@@ -86,22 +104,20 @@
 					hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
 					minutes: Math.floor((difference / 1000 / 60) % 60),
 					seconds: Math.floor((difference / 1000) % 60),
-				};
+				}
 
 				remaining = Object.keys(parts)
 					.map((part) => {
-						if (!parts[part]) return;
-						return `${parts[part]} ${part}`;
+						if (!parts[part]) return
+						return `${parts[part]} ${part}`
 					})
-					.join(' ');
+					.join(' ')
 			}
 
-			document.getElementById('countdown').innerHTML = remaining;
+			document.getElementById('countdown').innerHTML = remaining
 		}
 
-		countdownTimer();
-		setInterval(countdownTimer, 1000);
+		countdownTimer()
+		setInterval(countdownTimer, 1000)
 	</script>
 </body>
-
-</html>
