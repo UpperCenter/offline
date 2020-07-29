@@ -1,10 +1,12 @@
 @viewport {
 	width: device-width;
-	zoom: 1.0;
+	zoom: 1;
 }
 
-html, body {
-	font-family: Ubuntu, -apple-system, BlinkMacSystemFont, 'Segoe UI', Tahoma, Geneva, Verdana, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+html,
+body {
+	font-family: Ubuntu, -apple-system, BlinkMacSystemFont, "Segoe UI", Tahoma, Geneva, Verdana, Cantarell, "Open Sans",
+		"Helvetica Neue", sans-serif;
 	font-size: 12px;
 	height: 100%;
 	width: 100%;
@@ -14,10 +16,10 @@ html, body {
 }
 
 code {
-	font-family: 'Source Code Pro', Consolas, Liberation Mono, Menlo, monospace;
-	background-color: rgba(220, 224, 228, 0.20) !important;
+	font-family: "Source Code Pro", Consolas, Liberation Mono, Menlo, monospace;
+	background-color: rgba(220, 224, 228, 0.2) !important;
 	border-radius: 6px;
-	padding: .2em .4em;
+	padding: 0.2em 0.4em;
 	margin: 0;
 	box-sizing: border-box;
 	font-size: 85%;
@@ -45,18 +47,16 @@ code {
 	text-align: center;
 }
 
-/*
-Hide the mobile logo by default
-*/
+/* Hide the
+mobile logo by default */
 
 .logo .mobile {
 	display: none;
 }
 
-/* 
-When the screen is less than 330px wide (Galaxy Fold)
-	Show the mobile version and hide the desktop one.
-*/
+/* When the screen is
+less than 330px wide (Galaxy Fold) Show the mobile version and hide the desktop
+one. */
 
 @media (max-width: 330px) {
 	.logo .mobile {
@@ -68,7 +68,8 @@ When the screen is less than 330px wide (Galaxy Fold)
 	}
 }
 
-p, h3 {
+p,
+h3 {
 	text-align: center;
 	color: aliceblue;
 	font-size: 20px;
@@ -97,15 +98,15 @@ a {
 }
 
 a::after {
-	content: '';
+	content: "";
 	position: absolute;
 	left: 0;
-	bottom: .07em;
-	height: .1em;
+	bottom: 0.07em;
+	height: 0.1em;
 	width: 100%;
 	background: linear-gradient(110deg, #e1f549, #29d0be, #6cb8ea, #ff5959);
 	z-index: -1;
-	transition: height .25s cubic-bezier(.6, 0, .4, 1);
+	transition: height 0.25s cubic-bezier(0.6, 0, 0.4, 1);
 }
 
 a:hover::after {
