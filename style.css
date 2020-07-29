@@ -30,7 +30,7 @@ code {
 	height: 100%;
 }
 
-.Center {
+.Content {
 	z-index: 50;
 	position: absolute;
 	transform: translate(-50%, -50%);
